@@ -1,0 +1,26 @@
+{
+  "name": "resume-evaluator-ai",
+  "version": "1.0.0",
+  "description": "AI project for evaluating resume and predicting an ats score",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-fileupload": "^1.4.3",
+    "joi": "^17.13.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1",
+    "morgan": "^1.10.0",
+    "openai": "^4.50.0",
+    "pdf-parse": "^1.1.1"
+  }
+}
