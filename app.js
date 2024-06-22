@@ -25,6 +25,7 @@ app.use(`/public`, express.static(path.join(__dirname, "public")));
 
 app.use('/api', router);
 
+
 // Start the server
 app.listen(port, (error) => {
     if (error) {
