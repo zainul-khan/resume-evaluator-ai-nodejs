@@ -1,0 +1,17 @@
+name: AI pipeline
+
+on:
+  push:
+    branches: ['main', 'zainul-dev']
+
+jobs:
+   build:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+    steps:
+      - uses: actions/checkout@main
+
+      - name: Run a one-line script
+        run: echo Hello, world!
+  
