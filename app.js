@@ -24,6 +24,7 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
 app.use(`/public`, express.static(path.join(__dirname, "public")));
 
 app.use('/api', router);
+//rest
 
 // Start the server
 app.listen(port, (error) => {
