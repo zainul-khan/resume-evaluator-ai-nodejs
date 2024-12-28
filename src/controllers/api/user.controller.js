@@ -37,6 +37,8 @@ module.exports = {
             const pdfData = await pdfToText(pdfBuffer);
             const resumeText = pdfData.text;
 
+            console.log('resumeText', resumeText)
+
             const chatCompletion = await openai.chat.completions.create({
                 messages: [
                     {
@@ -63,7 +65,7 @@ module.exports = {
                     },
                     {
                         role: 'user',
-                        content: `Covert the given json information to html. This is a json object use internel css and return a full fledged html page out of this json. This is the data ${JSON.stringify(resumeData)} there is a section called suggestion so inseatd of adding it directly please implenent those suggestions with mock data`
+                        content: `Covert the given json information to html. This is a json object use beautiful internel css and return a full fledged html page out of this json. This is the data ${JSON.stringify(resumeData)} there is a section called suggestion so instead of adding it directly strictly implenent those suggestions with mock data. Again do not shows suggestion implemented as a section rather implement them as a mock data`
                     }
                 ],
                 model: 'gpt-4o'
@@ -73,6 +75,8 @@ module.exports = {
             const htmlData = htmlGeneratedWithSuggestions.choices[0].message.content
 
             var cleanedHtml = htmlData.replace(/[\n\\]/g, ' ');
+            // Now, cleanedHtml will have all backslashes removed and all newline characters replaced with a space.
+
 
             return res.status(200).json({ 
                 resumeData,  
